@@ -1,0 +1,17 @@
+.show-list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  margin: 10px;
+}
+
+.button-container{
+  justify-content: flex-end;
+}
+
+.unliked{
+  color: gray;
+}
+.liked{
+  color: accent;
+}

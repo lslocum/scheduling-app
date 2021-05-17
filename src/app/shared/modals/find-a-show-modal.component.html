@@ -1,0 +1,31 @@
+<div class="modal-container">
+  <div mat-dialog-title>
+    <h2>Find a Show</h2>
+  </div>
+
+  <mat-dialog-content>
+    <app-search (onSearch)="applyFilter($event)" (resetFilter)="applyFilter('')"></app-search>
+    <div class="show-list">
+      <ng-container *ngFor="let show of shows">
+        <span>
+          <button mat-icon-button color="accent" [ngClass]="userShows.includes(show) ? 'liked' : 'unliked'" (click)="addAShow(show)">
+            <mat-icon> favorite </mat-icon>
+          </button>
+        {{ show.title }}
+      </span>
+      </ng-container>
+    </div>
+  </mat-dialog-content>
+
+  <mat-dialog-actions class="button-container">
+    <button mat-flat-button class="button" (click)="cancel()">Cancel</button>
+    <button
+          mat-raised-button
+          class="button button-primary"
+          color="primary"
+          (click)="closeModal()"
+        >
+          Save
+        </button>
+  </mat-dialog-actions>
+</div>

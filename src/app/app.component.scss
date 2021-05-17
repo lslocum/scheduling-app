@@ -1,0 +1,34 @@
+.app {
+  margin: 0 auto;
+  max-width: 1080px;
+
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    background-color: hsl(188, 100%, 32%);
+  }
+
+  .logo {
+    width: 10rem;
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  h1 {
+    // color: hsl(188, 100%, 45%);
+    color:white;
+    font-weight: 400;
+    font-size: 2.5rem;
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  .app-outlet {
+    padding-top: 102px;
+  }
+}

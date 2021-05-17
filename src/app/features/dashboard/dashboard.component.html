@@ -1,0 +1,53 @@
+<div class="header" color="primary" *ngIf="user$ | async as user">
+  Welcome {{ user.firstName }} {{ user.lastName }}!
+</div>
+<div class="body">
+  <section>
+    <h2>Shows you've scheduled</h2>
+    <div class="like-list" *ngIf="scheduledShows$ | async as scheduledShows">
+      <ng-container *ngFor="let day of daysOfTheWeek">
+        <section *ngIf="scheduledShows[day]">
+          <h3 color="primary">{{ day }}</h3>
+          <table class="scheduled-show-table">
+            <tr>
+              <th>Show</th>
+              <th class="time-column">Time</th>
+              <th class="action-column"></th>
+            </tr>
+            <ng-container *ngFor="let show of scheduledShows[day]">
+              <tr>
+                <td>{{ show.title }}</td>
+                <td class="time-column">{{ show.time }}</td>
+                <td class="action-column">
+                  <button mat-icon-button color="warn" (click)="removeSchedule(show)">
+                    <mat-icon>delete</mat-icon>
+                  </button>
+                </td>
+              </tr>
+            </ng-container>
+          </table>
+        </section>
+      </ng-container>
+    </div>
+  </section>
+
+  <section>
+    <h2>Shows you like</h2>
+    <div class="like-list">
+      <ng-container *ngFor="let show of gameShows$ | async">
+        <span>
+          <button mat-icon-button color="accent">
+            <mat-icon>favorite</mat-icon>
+          </button>
+          {{ show.title }}
+
+          <a class="details-link" mat-flat-button [routerLink]="['/show-details/' + show.showId]">Show details</a>
+        </span>
+      </ng-container>
+    </div>
+
+    <div class="button-group">
+      <button mat-raised-button color="primary" (click)="findAShow()">Find a Show</button>
+    </div>
+  </section>
+</div>

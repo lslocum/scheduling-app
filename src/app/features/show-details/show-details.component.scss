@@ -1,0 +1,57 @@
+.header {
+  display: flex;
+  flex-flow: column wrap;
+  // gap: 30px;
+  // justify-content: center;
+  align-content: center;
+
+  .show-title {
+    margin-bottom: 0;
+  }
+
+  .host {
+    color: hsl(188, 70%, 40%);
+  }
+}
+
+.table {
+  display: flex;
+  justify-content: center;
+
+  table {
+    border-radius: 50%;
+    border-collapse: collapse;
+    max-width: 100%;
+    min-width: 50%;
+  }
+
+  td,
+  th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+
+  th {
+    font-weight: 400;
+    color: white;
+    background-color: #3f51b5;
+  }
+
+  .add-column {
+    display: flex;
+    justify-content: center;
+
+    .mat-mini-fab {
+      float: center;
+    }
+  }
+
+  .day{
+    width: 40%;
+  }
+
+  .time{
+    width: 40%;
+  }
+}

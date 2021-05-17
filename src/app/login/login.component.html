@@ -1,0 +1,32 @@
+<h2>Log In</h2>
+<form [formGroup]="loginFormGroup">
+  <div class="login-form">
+    <mat-form-field>
+      <input
+      matInput
+      type="text"
+      formControlName="userName"
+      placeholder="User Name"
+    />
+      <mat-error>User name is required.</mat-error>
+    </mat-form-field>
+
+    <mat-form-field>
+      <input
+      matInput
+      type="password"
+      formControlName="password"
+      placeholder="Password"
+    />
+      <mat-error>Password is required.</mat-error>
+    </mat-form-field>
+  </div>
+</form>
+<div class="button-group">
+  <a mat-flat-button [routerLink]="['/create-account']">
+    Create Account
+  </a>
+  <button mat-raised-button color="primary" (click)="login()">
+    Log In
+  </button>
+</div>

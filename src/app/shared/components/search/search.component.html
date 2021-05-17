@@ -1,0 +1,10 @@
+<mat-form-field class="search" floatLabel="never">
+  <input
+    matInput
+    type="search"
+    [formControl]="searchControl"
+    placeholder="Search..."
+    (keyup)="applyFilter($event)"
+  />
+  <mat-icon matSuffix (click)="resetFilters()">undo</mat-icon>
+</mat-form-field>
