@@ -1,4 +1,6 @@
 # SchedulingApp
+This app was created to demonstrate the concepts in a blog post about Layered Service Architectures in Angular.
+
 [Edit on StackBlitz ⚡️](https://stackblitz.com/edit/scheduling-app)
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.6.
