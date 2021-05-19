@@ -1,10 +1,17 @@
-.create-account-form{
+.create-account-form {
   display: flex;
-  flex-flow: row wrap;
-  gap: 20px;
+  flex-flow: column wrap;
+  gap: 1rem;
+  align-content: center;
+
+  .input-group {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1rem;
+  }
 }
 
-.button-group{
+.button-group {
   display: flex;
   justify-content: flex-end;
 }

@@ -7,10 +7,9 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { Route, RouterModule } from '@angular/router';
 
+import { FindAShowModule } from '../shared/modals/find-a-show-modal.module';
+
 import { DashboardComponent } from './dashboard.component';
-import { DashboardLogicService } from './services/dashboard-logic.service';
-import { DashboardDataService } from './services/dashboard-data.service';
-import { FindAShowModule } from '../../shared/modals/find-a-show-modal.module';
 
 const routes: Route[] = [{ path: '', component: DashboardComponent }];
 
@@ -25,8 +24,7 @@ const routes: Route[] = [{ path: '', component: DashboardComponent }];
     MatIconModule,
     MatInputModule,
     MatButtonModule,
-    FindAShowModule
+    FindAShowModule,
   ],
-  providers: [DashboardLogicService, DashboardDataService]
 })
 export class DashboardModule {}

@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 
-import { hostsData } from '../../../../data/show-hosts.data';
-import { showSchedulesData } from '../../../../data/show-schedules.data';
-import { ShowHost } from '../../../shared/models/show-host';
-import { ShowSchedule } from '../../../shared/models/show-schedule';
+import { ShowHost } from 'src/app/shared/models/show-host';
+import { ShowSchedule } from 'src/app/shared/models/show-schedule';
+import { hostsData } from 'src/data/show-hosts.data';
+import { showSchedulesData } from 'src/data/show-schedules.data';
+
 
 @Injectable({
   providedIn: 'root'

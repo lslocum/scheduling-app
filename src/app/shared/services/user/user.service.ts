@@ -8,8 +8,6 @@ import { GameShow } from '../../models/game-show';
 import { ShowScheduleViewModel, ScheduleTime } from '../../models/show-schedule';
 import { User } from '../../models/user';
 
-
-
 import { UserDataService } from './user-data.service';
 
 @Injectable({
@@ -21,18 +19,6 @@ export class UserService {
   scheduledShows = new BehaviorSubject<ShowScheduleViewModel[]>([]);
 
   constructor(private userDataService: UserDataService, private snackBar: MatSnackBar) {}
-
-  getCurrentUser(): Observable<User> {
-    return this.currentUser.asObservable();
-  }
-
-  getUsersFavoriteShows(): Observable<GameShow[]> {
-    return this.favoriteShows.asObservable();
-  }
-
-  getScheduledShows(): Observable<ShowScheduleViewModel[]> {
-    return this.scheduledShows.asObservable();
-  }
 
   getIsUserAuthorized(): boolean {
     let currentUser = this.currentUser.getValue();

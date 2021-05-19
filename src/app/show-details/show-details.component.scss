@@ -1,9 +1,8 @@
 .header {
   display: flex;
   flex-flow: column wrap;
-  // gap: 30px;
-  // justify-content: center;
   align-content: center;
+  text-align: center;
 
   .show-title {
     margin-bottom: 0;
@@ -29,7 +28,7 @@
   th {
     border: 1px solid #dddddd;
     text-align: left;
-    padding: 8px;
+    padding: 0.5rem;
   }
 
   th {
@@ -47,11 +46,22 @@
     }
   }
 
-  .day{
+  .day {
     width: 40%;
   }
 
-  .time{
+  .time {
     width: 40%;
+  }
+}
+
+.iframe-div {
+  width: 100%;
+  height: 30rem;
+  margin: 2rem 0;
+
+  .iframe{
+    width: 100%;
+    height: 100%;
   }
 }

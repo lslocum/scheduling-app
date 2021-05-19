@@ -8,31 +8,30 @@ import { LoginComponent } from './login/login.component';
 const routes: Routes = [
   {
     path: 'login',
-    component: LoginComponent
+    component: LoginComponent,
   },
   {
     path: 'create-account',
-    component: CreateAccountComponent
-
+    component: CreateAccountComponent,
   },
   {
     path: 'dashboard',
     canActivate: [AuthGuard],
-    loadChildren: () => import('./features/dashboard/dashboard.module').then(m=>m.DashboardModule)
+    loadChildren: () => import('./dashboard/dashboard.module').then((m) => m.DashboardModule),
   },
-    {
+  {
     path: 'show-details/:id',
     canActivate: [AuthGuard],
-    loadChildren: () => import('./features/show-details/show-details.module').then(m=>m.ShowDetailsModule)
+    loadChildren: () => import('./show-details/show-details.module').then((m) => m.ShowDetailsModule),
   },
   {
     path: '**',
-    redirectTo: 'dashboard'
-  }
+    redirectTo: 'dashboard',
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, { enableTracing: false })],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}

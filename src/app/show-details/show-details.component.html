@@ -1,0 +1,31 @@
+<div class="header">
+  <h1 class="show-title">{{ show.title }}</h1>
+  <h3 class="host">Hosted by: {{ host.name }}</h3>
+</div>
+
+<div class="table">
+  <table>
+    <tr>
+      <th>Day</th>
+      <th>Time</th>
+      <th>Add to my schedule</th>
+    </tr>
+    <ng-container *ngFor="let day of schedule">
+      <tr>
+        <td class="day">{{ day.day }}</td>
+        <td class="time">{{ day.time }}</td>
+        <td class="add-column">
+          <button mat-mini-fab (click)="addShowToSchedule(day)"><mat-icon>add</mat-icon></button>
+        </td>
+      </tr>
+    </ng-container>
+  </table>
+</div>
+
+<div class="iframe-div" [title]="'Wikipedia page for ' + show.title">
+  <iframe class="iframe" [src]="wikiUrl"></iframe>
+</div>
+
+<footer>
+  <a mat-stroked-button color="primary" [routerLink]="['/dashboard']">Back to dashboard</a>
+</footer>
